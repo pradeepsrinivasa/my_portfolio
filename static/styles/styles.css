@@ -1,0 +1,247 @@
+/* About Me Section */
+.about-me-section {
+    background: linear-gradient(120deg,rgb(111, 216, 164), #99d378);/* Gradient background */
+    padding: 40px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text */
+    max-width: 100%; /* Constrain width */
+    margin: 20px auto; /* Center the section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.about-me-section:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Elevated shadow on hover */
+}
+
+.about-me-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #14bddb; /* Softer text color */
+    text-shadow:2px 2px 2px rgb(192, 248, 89);
+    font-weight: bold; /* Emphasized header */
+    letter-spacing: 2px; /* Spacing between letters */
+}
+
+.about-me-section p {
+    font-size: 1.2em;
+    
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: bolder;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1em;
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+footer a {
+    color: #27c079;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+footer a:hover {
+    color: #1ca675;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Navbar Styling */
+.navbar {
+    background: radial-gradient(circle, rgba(41, 97, 82, 0.7), transparent 60%),
+                linear-gradient(120deg, #296152, #1ca675 30%, #27c079 60%, #2ac08d 90%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    padding: 10px 20px;
+    border-radius: 12px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    z-index: 1000; /* Ensures navbar stays on top */
+    margin-top: 10px;
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+
+
+/* Navbar Brand (Your Name) */
+.navbar-brand {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Text shadow for depth */
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Smooth transform */
+}
+
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #fff 3px solid;
+    position: relative;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    background-color: #27c079;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Sections */
+.section {
+    padding: 20px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #eaeaeb;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+    text-align: center; /* Center the headings */
+}
+
+/* Project Cards */
+.projects-container {
+    display: flex;
+    
+    
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #f9f9f9;
+    width: 330px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 430px;
+}
+
+.project-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* Circular image */
+    margin-bottom: 15px;
+    border: 4px solid #27c079; /* Border around the image */
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-card p {
+    font-size:15px;
+    color:red;
+    margin-bottom: 20px;
+    margin-top: 25px;
+
+}
+
+.project-card .tags {
+    display: flex;
+    justify-content:center8;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    flex-direction: row;
+}
+
+
+
+.project-card .tags span {
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Elevated shadow */
+}
+
