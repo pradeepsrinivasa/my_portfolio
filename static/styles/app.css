@@ -1,28 +1,24 @@
-/* Responsive Styles */
-@media screen and (max-width: 800px) {
+@media (max-width: 600px) {
     .projects-container {
-        flex-direction: column;
+        flex-direction: column; /* Stack projects vertically */
     }
 
     .project-card {
         width: 100%; /* Full width on small screens */
-    }
-    .about-me-section{
-      width: 100%; /* Full width on small screens */
-
-        
-
-        
+        margin-bottom: 20px; /* Space between cards */
     }
 
     .navbar h1 {
-        font-size: 24px;
+        font-size: 24px; /* Adjust navbar heading size */
+        text-align: center; /* Center text for better presentation */
     }
 
     .role {
-        font-size: 20px;
+        font-size: 20px; /* Adjust role text size */
+        text-align: center; /* Center text for consistency */
     }
 }
+
 
 :root {
   --color-sub: #2d2d39;
