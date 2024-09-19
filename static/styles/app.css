@@ -1,5 +1,5 @@
 /* Responsive Styles */
-@media (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .projects-container {
         flex-direction: column;
     }
