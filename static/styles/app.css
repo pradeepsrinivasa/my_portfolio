@@ -1,8 +1,7 @@
 @media only screen and (max-width: 600px) {
- .navbar{
+ .navbar,about-me-section{
   width:200%;
-  color:red:
-  
+    
   }
 }
 
