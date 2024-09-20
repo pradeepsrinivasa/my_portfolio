@@ -1,5 +1,9 @@
 @media only screen and (max-width: 600px) {
- .navbar,.about-me-section{
+ .navbar{
+  width:200%;
+    
+  }
+ .about-me-section{
   width:200%;
     
   }
