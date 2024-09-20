@@ -1,33 +1,9 @@
 @media only screen and (max-width: 600px) {
-  body {
+ .navbar{
     background-color: lightblue;
   }
 }
 
-@media (max-width: 600px) {
-    .
-        .projects-container {
-          display: flex;
-          flex-wrap: wrap;
-}
-
-        
-        /* Stack projects vertically */
-    }
-
-    @media (max-width: 600px) {
-    .project-card {
-        padding: 10px;
-    }
-
-    .navbar h1 {
-        margin: 10px 0;
-    }
-
-    .role {
-        margin-top: 10px;
-    }
-}
 
 
 :root {
