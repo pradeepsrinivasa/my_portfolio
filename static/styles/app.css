@@ -11,6 +11,12 @@
   font-size:200%;
   
  }
+ .singleProject__subtitle{
+    font-size:200%;
+
+  
+ }
+}
 
 .singleProject {
   display: flex;
