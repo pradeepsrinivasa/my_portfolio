@@ -1,21 +1,25 @@
 @media (max-width: 600px) {
-    .projects-container {
-        flex-direction: column; /* Stack projects vertically */
+    .
+        .projects-container {
+          display: flex;
+          flex-wrap: wrap;
+}
+
+        
+        /* Stack projects vertically */
     }
 
+    @media (max-width: 600px) {
     .project-card {
-        width: 100%; /* Full width on small screens */
-        margin-bottom: 20px; /* Space between cards */
+        padding: 10px;
     }
 
     .navbar h1 {
-        font-size: 24px; /* Adjust navbar heading size */
-        text-align: center; /* Center text for better presentation */
+        margin: 10px 0;
     }
 
     .role {
-        font-size: 20px; /* Adjust role text size */
-        text-align: center; /* Center text for consistency */
+        margin-top: 10px;
     }
 }
 
