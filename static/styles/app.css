@@ -1,3 +1,36 @@
+@media only screen and (max-width: 600px) {
+ .navbar,main,footer{
+  width:200%;
+    
+  }
+ a{
+   height:350%;
+  
+ }
+ .singleProject__info{
+  font-size:200%;
+  
+ }
+ .singleProject__subtitle{
+    font-size:200%;
+
+  
+ }
+ .link{
+     font-size:200%;
+
+ }
+ .singleProject my-md{
+  width:70%;
+ }
+}
+
+.singleProject {
+  display: flex;
+}
+
+ 
+
 
 :root {
   --color-sub: #2d2d39;
@@ -915,3 +948,8 @@ img {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Elevated shadow */
 }
+
+.singleProject {
+  flex-wrap: wrap;
+}
+
