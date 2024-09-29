@@ -18,6 +18,19 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
             transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
         }
+        #card1,#card2,#card3{
+            max-width: 300px;
+
+        }
+        @media only screen and (max-width:600px){
+
+            #card1,#card2,#card3{
+                width:100px;
+                
+            }
+
+        }
+
     </style>
 </head>
 <body>
@@ -71,20 +84,19 @@
 
         <section class="about-me-section">
             <h2 style="font-size: 30px; color: #14bddb; text-shadow: 2px 2px 2px rgb(192, 248, 89); font-weight: bold;">Achivements & Certifications</h2>
-            <div class="projects-container" style="gap: 30px;" >
+            <div class="projects-container" style="gap: 100px;" >
                 <div class="card project"  id="card1">
-                    <img class="project__thumbnail" src="static/images/career.png" alt="project thumbnail" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+                    <img class="project__thumbnail" src="static/images/dj.png" alt="project thumbnail" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
                     
                     <div class="card__body" style="padding: 16px; display: flex; flex-direction: column; gap: 10px;">
                         <h3 class="project__title" style="font-size: 18px; font-weight: bold;">Complete Django Course</h3>
                         <p style="font-size: 14px; color: #888;">Udemy</p>
                         
-                        <p style="font-size: 14px; line-height: 1.6;">
-                            I've learned the fundamentals of Django and the Django Rest Framework, including working with email, messaging, and Django ORM. How to create an AWS RDS instance, AWS S3 object storage, and finally how to deploy on web server.
-                        </p>
+                      
                         
                         <!-- Tags Section -->
                         <div class="project__tags" >
+                            
                         </div>
                         <a href="https://udemy-certificate.s3.amazonaws.com/image/UC-cab11dc0-b990-468d-9754-b43f4e840130.jpg" style="margin-top: 10px;" target="_blank">Certificate</a>
                     </div>
@@ -92,14 +104,13 @@
 
 
                 <div class="card project" id="card2" style="border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; background-color: #fff;">
-                    <img class="project__thumbnail" src="static/images/career.png" alt="project thumbnail" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+                    <img class="project__thumbnail" src="static/images/ds.jpeg" alt="project thumbnail" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
                     
                     <div class="card__body" style="padding: 16px; display: flex; flex-direction: column; gap: 10px;">
                         <h3 class="project__title" style="font-size: 18px; font-weight: bold;">Machine Learning & Data Science Intern(online)</h3>
                         <p style="font-size: 14px; color: #888;">PanTech</p>
                         
-                        <p style="font-size: 14px; line-height: 1.6;">
-                            I learned Numpy,Pandas,Sci-py and Data Science Process.By finished this intern I had capable to build an trained model and dump using pickle and integrated for production                      </p>
+                        
                         
                         <!-- Tags Section -->
                         <div class="project__tags" style="display: flex; flex-wrap: wrap; gap: 10px; padding-bottom: 10px;">
@@ -118,15 +129,12 @@
 
 
                 <div class="card project" id="card3" style="border: 1px solid #e0e0e0; border-radius: 10px; overflow: hidden; background-color: #fff;">
-                    <img class="project__thumbnail" src="static/images/career.png" alt="project thumbnail" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
+                    <img class="project__thumbnail" src="static/images/hk.jpeg" alt="project thumbnail" style="width: 100%; height: 200px; object-fit: cover; border-top-left-radius: 10px; border-top-right-radius: 10px;" />
                     
                     <div class="card__body" style="padding: 16px; display: flex; flex-direction: column; gap: 10px;">
                         <h3 class="project__title" style="font-size: 18px; font-weight: bold;">Python(Basic) Challenge</h3>
                         <p style="font-size: 14px; color: #888;">HackerRank</p>
                         
-                        <p style="font-size: 14px; line-height: 1.6;">
-                           In this Challenge two codes are given to solve within the 90 minutes and code based on the oops concept
-                        </p>
                         
                         <!-- Tags Section -->
                         <div class="project__tags" style="display: flex; flex-wrap: wrap; gap: 10px; padding-bottom: 10px;">
@@ -170,10 +178,7 @@
             let span = document.createElement('span'); // Create a new <span> element
             span.className = 'tag tag--pill tag--main'; // Add classes to the span
     
-            let p = document.createElement('p'); // Create a new <p> element
-            p.id = i; // Assign an id (optional)
-            p.textContent = skills[i]; // Set the text content to the current skill
-            span.appendChild(p); // Append the <p> element to the <span>
+           span.textContent=skills[i]
     
             // Append the <span> to the parent container with id 'project_tags'
            
