@@ -94,6 +94,8 @@
           </div>
           <div style="margin-top: 20px;" clas="link">
             <p style="display: inline;font-weight: bolder;">Website Link:</p>
+
+
             
               <a href="https://devconnect-pcus.onrender.com/" target="_blank"><U>https://devconnect-pcus.onrender.com/</U></a>
 
@@ -103,6 +105,91 @@
           </div>
 
     </div>
+<div> 
+”""// src/ToDoApp.tsx
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+interface Task {
+  id: number;
+  text: string;
+  completed: boolean;
+}
+
+const ToDoApp: React.FC = () => {
+  const [tasks, setTasks] = useState<Task[]>([]);
+  const [taskText, setTaskText] = useState('');
+
+  const addTask = () => {
+    if (taskText.trim()) {
+      const newTask: Task = {
+        id: Date.now(),
+        text: taskText,
+        completed: false,
+      };
+      setTasks([...tasks, newTask]);
+      setTaskText('');
+    }
+  };
+
+  const toggleTaskCompletion = (id: number) => {
+    setTasks(tasks.map(task => (
+      task.id === id ? { ...task, completed: !task.completed } : task
+    )));
+  };
+
+  const deleteTask = (id: number) => {
+    setTasks(tasks.filter(task => task.id !== id));
+  };
+
+  return (
+    <div className="container mt-5">
+      <h2 className="text-center mb-4">To-Do List</h2>
+      <div className="input-group mb-3">
+        <input
+          type="text"
+          className="form-control"
+          placeholder="Enter new task"
+          value={taskText}
+          onChange={(e) => setTaskText(e.target.value)}
+        />
+        <button className="btn btn-primary" onClick={addTask}>
+          Add Task
+        </button>
+      </div>
+      <ul className="list-group">
+        {tasks.map((task) => (
+          <li
+            key={task.id}
+            className="list-group-item d-flex justify-content-between align-items-center"
+          >
+            <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+              {task.text}
+            </span>
+            <div>
+              <button
+                className="btn btn-success btn-sm me-2"
+                onClick={() => toggleTaskCompletion(task.id)}
+              >
+                {task.completed ? 'Undo' : 'Done'}
+              </button>
+              <button
+                className="btn btn-danger btn-sm"
+                onClick={() => deleteTask(task.id)}
+              >
+                Delete
+              </button>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default ToDoApp;""""
+
+</div>
   </main>
 </body>  
 </html>
