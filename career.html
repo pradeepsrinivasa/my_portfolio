@@ -95,8 +95,75 @@
             <p style="display: inline;font-weight: bolder;">Website Link:</p>
             
               <U>Under An Deployment Process</U>
+<pre>
+<code>
+import React, { useState } from "react";
 
-      
+interface Todo {
+  id: number;
+  text: string;
+  completed: boolean;
+}
+
+const TodoHome: React.FC = () => {
+  const [todos, setTodos] = useState<Todo[]>([]);
+  const [input, setInput] = useState<string>("");
+
+  // Add new todo
+  const addTodo = () => {
+    if (input.trim() === "") return;
+    const newTodo: Todo = { id: Date.now(), text: input, completed: false };
+    setTodos([...todos, newTodo]);
+    setInput("");
+  };
+
+  // Toggle completion status
+  const toggleComplete = (id: number) => {
+    setTodos(
+      todos.map(todo =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
+  // Remove todo
+  const removeTodo = (id: number) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  };
+
+  return (
+    <div style={{ maxWidth: "400px", margin: "auto", textAlign: "center" }}>
+      <h2>Todo List</h2>
+      <div>
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Enter a task"
+        />
+        <button onClick={addTodo}>Add</button>
+      </div>
+      <ul style={{ listStyle: "none", padding: 0 }}>
+        {todos.map(todo => (
+          <li key={todo.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "10px" }}>
+            <span 
+              style={{ textDecoration: todo.completed ? "line-through" : "none", cursor: "pointer" }}
+              onClick={() => toggleComplete(todo.id)}
+            >
+              {todo.text}
+            </span>
+            <button onClick={() => removeTodo(todo.id)}>❌</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default TodoHome;
+
+</pre>
+</code>
           
               
           </div>
