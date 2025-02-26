@@ -202,5 +202,15 @@
 
 
     </script>
+
+<pre>
+<code>
+div style={{ maxWidth: "400px", margin: "auto", textAlign: "center" }}> <h2>Todo List</h2> <div> <input type="text" value={input} onChange={(e) => setInput(e.target.value)} placeholder="Enter a task" /> <button onClick={addTodo}>Add</button> </div> <ul style={{ listStyle: "none", padding: 0 }}> {todos.map(todo => ( <li key={todo.id} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginTop: "10px" }}> <span style={{ textDecoration: todo.completed ? "line-through" : "none", cursor: "pointer" }} onClick={() => toggleComplete(todo.id)} > {todo.text} </span> <button onClick={() => removeTodo(todo.id)}>❌</button> </li> ))} </ul> </div> ); };
+
+export default TodoHome;
+
+I want show above code in snippet
+</code>
+</pre>
 </body>
 </html>
